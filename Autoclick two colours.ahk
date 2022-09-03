@@ -17,23 +17,22 @@ SendMode Input
 
 Esc::BreakLoop=1
 F10::
-BreakLoop:=0
-Loop {
-Sleep 40
-PixelSearch, A, B, 150, 150, %A_ScreenWidth%, %A_ScreenHeight%, 0x08B7F9, 1, Fast
-if (ErrorLevel = 0){
-CoordMode, Mouse, Screen
-MouseMove, %A%, %B%
-Click
-}
-Sleep 40
-PixelSearch, A, B, 150, 150, %A_ScreenWidth%, %A_ScreenHeight%, 0x4A96D1, 1, Fast
-if (ErrorLevel = 0){
-CoordMode, Mouse, Screen
-MouseMove, %A%, %B%
-Click
-}
-  if ( BreakLoop = 1 )
-    break
-}
-return
+   BreakLoop:=0
+   Loop {
+      Sleep 40
+      PixelSearch, A, B, 150, 150, %A_ScreenWidth%, %A_ScreenHeight%, 0x08B7F9, 1, Fast
+      if (ErrorLevel = 0){
+         CoordMode, Mouse, Screen
+         MouseMove, %A%, %B%
+         Click
+      }
+      Sleep 40
+      PixelSearch, A, B, 150, 150, %A_ScreenWidth%, %A_ScreenHeight%, 0x4A96D1, 1, Fast
+      if (ErrorLevel = 0){
+         CoordMode, Mouse, Screen
+         MouseMove, %A%, %B%
+         Click
+      }
+      if ( BreakLoop = 1 )break
+   }
+return              
