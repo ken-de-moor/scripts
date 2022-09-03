@@ -33,6 +33,7 @@ F10::
          MouseMove, %A%, %B%
          Click
       }
-      if ( BreakLoop = 1 )break
+      if ( BreakLoop = 1 )
+      break
    }
 return              
